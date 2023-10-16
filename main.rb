@@ -1,4 +1,5 @@
 def main_menu
+  puts 'Main Menu'
   puts '1) List all Books'
   puts '2) List all Music Albums'
   puts '3) List all Games'
@@ -14,24 +15,21 @@ def main_menu
   puts '13) Exit the program'
 end
 
-def options(input)
-  case input
-  when 1 then list_all_books
-  when 2 then list_all_music_albums
-  when 3 then list_all_games
-  when 4 then list_all_movies
-  when 5 then list_all_genre
-  when 6 then list_all_labels
-  when 7 then list_all_authors
-  when 8 then list_all_sources
-  when 9 then add_book
-  when 10 then add_music_album
-  when 11 then add_game
-  when 12 then add_movie
-  when 13
-    # save_data
-    13
-  end
+def list_all_books
+  # Implement the logic to list all books
+  puts 'Listing all books...'
+end
+
+def list_all_music_albums
+  # Implement the logic to list all music albums
+  puts 'Listing all music albums...'
+end
+
+# Define methods for other menu options
+
+def exit_program
+  # Implement any cleanup or exit logic here
+  puts 'Exiting the program.'
 end
 
 def main
@@ -40,7 +38,20 @@ def main
   while running
     main_menu
     input = gets.to_i
-    break if options(input) == 13
+
+    case input
+    when 1
+      list_all_books
+    when 2
+      list_all_music_albums
+    when 3
+      # Handle other menu options in a similar way
+    when 13
+      exit_program
+      running = false
+    else
+      puts 'Invalid option. Please select a valid option.'
+    end
   end
 end
 
