@@ -17,6 +17,11 @@ class Item
     results > 10
   end
 
+  def genre=(genre)
+    @genre = genre
+    genre.items << self unless genre.items.include?(self)
+  end
+  
   def move_to_archive
     @archived = true if can_be_archived? == true
   end
