@@ -1,10 +1,10 @@
-require_relative './list_books'
-require_relative './list_label'
-require_relative './game_list'
-require_relative './author_list'
-require_relative './genre_list'
-require_relative './music_album_list'
-require_relative './movie_handler'
+require_relative 'list_books'
+require_relative 'list_label'
+require_relative 'game_list'
+require_relative 'author_list'
+require_relative 'genre_list'
+require_relative 'music_album_list'
+require_relative 'movie_handler'
 
 class App
   attr_accessor :books, :games, :labels, :authors, :genres, :musics, :movies_sources

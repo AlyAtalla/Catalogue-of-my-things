@@ -1,7 +1,7 @@
 require 'json'
 require_relative 'movie'
 require_relative 'source'
-require_relative './input'
+require_relative 'input'
 
 class MovieHandler
   attr_accessor :movie
