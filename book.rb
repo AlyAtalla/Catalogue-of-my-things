@@ -1,20 +1,17 @@
 require_relative 'item'
+
 class Book < Item
   attr_accessor :publisher, :cover_state
 
-  def initialize(publisher, cover_state, publish_date, archived: false)
-    super(publish_date, archived: archived)
+  def initialize(publish_date, archived, publisher, cover_state, id = Time.now.to_f.to_s)
+    super(publish_date, archived, id)
     @publisher = publisher
     @cover_state = cover_state
   end
 
-  private
-
   def can_be_archived?
-    super == true || @cover_state.downcase == 'bad'
+    return true if super == true || @cover_state == 'bad'
+
+    false
   end
 end
-
-b = Book.new('DMS', 'Lagos', '2023-10-10')
-
-p b

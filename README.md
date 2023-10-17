@@ -59,7 +59,7 @@ git clone https://github.com/AlyAtalla/ruby-capstone.git
 
 - GitHub: [@githubhandle](https://github.com/AlyAtalla)
 
-👤 **Sodeeq**
+👤 **Sodeeq .**
 - GitHub: [@soddeq](https://github.com/Errytagedesign)
 
 👤 **Varte Lawmsangi**
