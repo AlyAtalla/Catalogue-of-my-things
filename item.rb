@@ -9,8 +9,6 @@ class Item
     @archived = archived
   end
 
-  attr_writer :author, :label, :source
-
   def can_be_archived?
     time = Time.now
     year = time.year
@@ -27,7 +25,6 @@ class Item
   def move_to_archive
     @archived = true if can_be_archived? == true
   end
-
 end
 
 object = Item.new(Time.new(2015, 1, 1), false)
