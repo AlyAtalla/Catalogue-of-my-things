@@ -1,6 +1,7 @@
 class Item
   attr_accessor :id, :publish_date, :archived
   attr_reader :genre
+  attr_writer :author, :label, :source
 
   def initialize(publish_date, archived, id = Random.rand(1..1000))
     @id = id
@@ -27,9 +28,8 @@ class Item
     @archived = true if can_be_archived? == true
   end
 
-  private :id, :can_be_archived, :archived
 end
 
-# object = Item.new(Time.new(2015, 1, 1), false)
-# puts object.can_be_archived?
-# puts object.move_to_archive
+object = Item.new(Time.new(2015, 1, 1), false)
+puts object.can_be_archived?
+puts object.move_to_archive

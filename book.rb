@@ -1,5 +1,5 @@
-relative_require '/item.rb'
-class Book
+require_relative 'item.rb'
+class Book < Item
     attr_accessor :publisher, :cover_state
 
     def initialize(publisher, cover_state, publish_date, archived: false)
@@ -14,3 +14,7 @@ class Book
       super == true || @cover_state.downcase == 'bad'
     end
 end
+
+b = Book.new('DMS', 'Lagos', '2023-10-10')
+
+p b
