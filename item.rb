@@ -18,10 +18,10 @@ class Item
   end
 
   def move_to_archive
-    @archived = true if can_be_archived? == true
+    @archived = true if can_be_archived?
   end
 
-  private :id, :can_be_archived, :archived
+  private
 end
 
 # object = Item.new(Time.new(2015, 1, 1), false)
