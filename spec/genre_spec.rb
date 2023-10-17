@@ -1,5 +1,5 @@
 require_relative '../genre'
-​
+
 describe Genre do
   before(:each) { @genre = Genre.new('Rock') }
 
