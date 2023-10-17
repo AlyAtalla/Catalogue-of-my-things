@@ -20,8 +20,6 @@ class Item
   def move_to_archive
     @archived = true if can_be_archived?
   end
-
-  private
 end
 
 # object = Item.new(Time.new(2015, 1, 1), false)
