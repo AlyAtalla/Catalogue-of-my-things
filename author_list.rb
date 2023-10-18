@@ -1,6 +1,6 @@
-require_relative 'author'
+require_relative './author'
 require 'json'
-require_relative 'input'
+require_relative './input'
 
 class AuthorList
   include Input

@@ -1,6 +1,6 @@
-require_relative 'game'
+require_relative './game'
 require 'json'
-require_relative 'input'
+require_relative './input'
 
 class GameList
   include Input

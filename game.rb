@@ -1,5 +1,5 @@
-require_relative 'item'
-require_relative 'years_difference'
+require_relative './item'
+require_relative './years_difference'
 
 class Game < Item
   include YearsDifference
@@ -13,6 +13,6 @@ class Game < Item
   end
 
   def can_be_archived?
-    super && years_to_today(@last_played_at) > 2
+    return true if super == true && years_to_today(@last_played_at) > 2
   end
 end

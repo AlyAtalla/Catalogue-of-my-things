@@ -19,15 +19,15 @@ end
 
 def options(app)
   option_actions = {
-    1 => app.books.method(:list_all_books),
-    2 => app.musics.method(:list_all_music_albums),
-    3 => app.games.method(:list_all_games),
-    5 => app.genres.method(:list_all_genre),
-    6 => app.labels.method(:list_all_labels),
+    1 => app.books.method(:list_all_books), 2 => app.musics.method(:list_all_music_albums),
+    3 => app.games.method(:list_all_games), 4 => app.movies_sources.method(:list_all_movies),
+    5 => app.genres.method(:list_all_genre), 6 => app.labels.method(:list_all_labels),
     7 => app.authors.method(:list_all_authors),
+    8 => app.movies_sources.method(:list_all_sources),
     9 => app.books.method(:add_book),
     10 => app.musics.method(:add_music_album),
     11 => app.games.method(:add_game_menu),
+    12 => app.movies_sources.method(:add_movie),
     13 => method(:exit_program)
   }
 
