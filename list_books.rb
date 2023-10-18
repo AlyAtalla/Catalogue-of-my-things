@@ -1,5 +1,5 @@
-require_relative './input'
-require_relative './book'
+require_relative 'input'
+require_relative 'book'
 require 'json'
 
 class ListBooks
