@@ -13,9 +13,8 @@ class Game < Item
   end
 
   def can_be_archived?
-    if super && years_to_today(@last_played_at) >= 2
-      return years_to_today(@publish_date) >= 10
-    end
+    return years_to_today(@publish_date) >= 10 if super && years_to_today(@last_played_at) >= 2
+
     false
   end
 end

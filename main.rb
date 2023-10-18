@@ -53,7 +53,7 @@ def main
 
   while running
     main_menu
-    input = gets.chomp.to_i  # Read user input and convert it to an integer
+    input = gets.chomp.to_i # Read user input and convert it to an integer
     options(app)
     break if input == 13
   end
