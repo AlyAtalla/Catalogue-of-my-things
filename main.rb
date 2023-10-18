@@ -25,7 +25,6 @@ def options(app)
     5 => app.genres.method(:list_all_genre),
     6 => app.labels.method(:list_all_labels),
     7 => app.authors.method(:list_all_authors),
-    8 => app.movies_sources.method(:list_all_sources),
     9 => app.books.method(:add_book),
     10 => app.musics.method(:add_music_album),
     11 => app.games.method(:add_game_menu),
