@@ -1,5 +1,7 @@
+require_relative './app'
+
 def main_menu
-  puts 'Main Menu'
+  puts 'Please choose an option by entering a number:'
   puts '1) List all Books'
   puts '2) List all Music Albums'
   puts '3) List all Games'
@@ -15,44 +17,48 @@ def main_menu
   puts '13) Exit the program'
 end
 
-def list_all_books
-  # Implement the logic to list all books
-  puts 'Listing all books...'
-end
+def options(app)
+  option_actions = {
+    1 => app.books.method(:list_all_books),
+    2 => app.musics.method(:list_all_music_albums),
+    3 => app.games.method(:list_all_games),
+    5 => app.genres.method(:list_all_genre),
+    6 => app.labels.method(:list_all_labels),
+    7 => app.authors.method(:list_all_authors),
+    8 => app.movies_sources.method(:list_all_sources),
+    9 => app.books.method(:add_book),
+    10 => app.musics.method(:add_music_album),
+    11 => app.games.method(:add_game_menu),
+    13 => method(:exit_program)
+  }
 
-def list_all_music_albums
-  # Implement the logic to list all music albums
-  puts 'Listing all music albums...'
-end
+  input = gets.chomp.to_i
+  action = option_actions[input]
 
-# Define methods for other menu options
+  if action
+    action.call
+  else
+    puts 'Invalid number, please try again!'
+  end
+end
 
 def exit_program
-  # Implement any cleanup or exit logic here
-  puts 'Exiting the program.'
+  puts 'Thanks for using this App!! ✨'
 end
 
 def main
   running = true
+  app = App.new
+  app.obtain_data
+  puts 'Welcome to our App! 🎉'
 
   while running
     main_menu
-    input = gets.to_i
-
-    case input
-    when 1
-      list_all_books
-    when 2
-      list_all_music_albums
-    when 3
-      # Handle other menu options in a similar way
-    when 13
-      exit_program
-      running = false
-    else
-      puts 'Invalid option. Please select a valid option.'
-    end
+    options(app)
+    break if input == 13
   end
+
+  app.save_data
 end
 
 main
