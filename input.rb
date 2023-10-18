@@ -8,10 +8,9 @@ module Input
     loop do
       print yield
       response = user_input
-      break if response.upcase == 'Y' || response.upcase == 'N'
+      break true if response.upcase == 'Y'
+      break false if response.upcase == 'N'
     end
-    return true if response.upcase == 'Y'
-    return false if response.upcase == 'N'
   end
 
   def text

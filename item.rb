@@ -22,7 +22,6 @@ class Item
   end
 end
 
-
 # object = Item.new(Time.new(2015, 1, 1), false)
 # puts object.can_be_archived?
 # puts object.move_to_archive
