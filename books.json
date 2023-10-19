@@ -1,0 +1,58 @@
+[
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "publish_date": "1925-04-10",
+    "genre": "Classic",
+    "archived": false
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "publish_date": "1960-07-11",
+    "genre": "Novel",
+    "archived": true
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "publish_date": "1949-06-08",
+    "genre": "Dystopian",
+    "archived": false
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "publish_date": "1813-01-28",
+    "genre": "Classic",
+    "archived": true
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "publish_date": "1951-07-16",
+    "genre": "Novel",
+    "archived": false
+  },
+  {
+    "title": "Moby-Dick",
+    "author": "Herman Melville",
+    "publish_date": "1851-10-18",
+    "genre": "Adventure",
+    "archived": true
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "publish_date": "1937-09-21",
+    "genre": "Fantasy",
+    "archived": false
+  },
+  {
+    "title": "War and Peace",
+    "author": "Leo Tolstoy",
+    "publish_date": "1869-01-20",
+    "genre": "Historical Fiction",
+    "archived": false
+  }
+]
